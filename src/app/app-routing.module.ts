@@ -20,7 +20,9 @@ const routes: Routes = [
   {path:"car-admin",component:CarAdminComponent},
   {path:"car-add",component:CarAddComponent},
   {path:"car-admin",component:CarAdminComponent},
-  {path:"car-update/:id",component:CarUpdateComponent}
+  {path:"car-update/:id",component:CarUpdateComponent},
+  {path:"brands/:id",component:CarListComponent},
+  {path:"colors/:id",component:CarListComponent}
 
 ];
 

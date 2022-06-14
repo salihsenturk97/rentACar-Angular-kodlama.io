@@ -34,6 +34,46 @@
       "id": 7,
       "name": "Skoda",
       "logo": "./assets/brand/skoda.png"
+    },
+    {
+      "name": "Chery",
+      "logo": "./assets/brand/default.png",
+      "id": 8
+    },
+    {
+      "name": "Chevrolet",
+      "logo": "./assets/brand/default.png",
+      "id": 9
+    },
+    {
+      "name": "Citroen",
+      "logo": "./assets/brand/default.png",
+      "id": 10
+    },
+    {
+      "name": "Dacia",
+      "logo": "./assets/brand/default.png",
+      "id": 11
+    },
+    {
+      "name": "Alfa Romeo",
+      "logo": "./assets/brand/default.png",
+      "id": 12
+    },
+    {
+      "name": "Aston Martin",
+      "logo": "./assets/brand/default.png",
+      "id": 13
+    },
+    {
+      "name": "Isuzu",
+      "logo": "./assets/brand/default.png",
+      "id": 14
+    },
+    {
+      "name": "Nissan",
+      "logo": "./assets/brand/default.png",
+      "id": 15
     }
   ],
   "cars": [
@@ -72,15 +112,6 @@
       "description": "718 Cayman",
       "colorName": "Siyah",
       "brandName": "Porsche"
-    },
-    {
-      "brandId": 1,
-      "colorId": 1,
-      "dailyPrice": 500,
-      "description": "nane",
-      "colorName": "dfdsfsddf",
-      "brandName": "fd",
-      "id": 6
     }
   ],
   "colors": [
@@ -91,6 +122,10 @@
     {
       "id": 2,
       "colorName": "Mavi"
+    },
+    {
+      "id": 3,
+      "colorName": "Kahverengi"
     },
     {
       "id": 4,
@@ -111,6 +146,30 @@
     {
       "colorName": "Gözlerinin rengi",
       "id": 8
+    },
+    {
+      "colorName": "Gümüş",
+      "id": 9
+    },
+    {
+      "colorName": "Pembe",
+      "id": 10
+    },
+    {
+      "colorName": "Sarı",
+      "id": 11
+    },
+    {
+      "colorName": "Turuncu",
+      "id": 12
+    },
+    {
+      "colorName": "Lacivert",
+      "id": 13
+    },
+    {
+      "colorName": "Gri",
+      "id": 14
     }
   ]
 }

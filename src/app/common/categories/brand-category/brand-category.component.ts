@@ -1,3 +1,6 @@
+import { Car } from './../../../models/car';
+import { ActivatedRoute } from '@angular/router';
+import { CarService } from 'src/app/services/car.service';
 import { Brand } from './../../../models/brand';
 import { BrandService } from './../../../services/brand.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,13 +13,16 @@ import { Component, OnInit } from '@angular/core';
 export class BrandCategoryComponent implements OnInit {
 
   constructor(private brandService: BrandService) { }
-
+  selectedId:number
   brands: Brand[];
+  cars:Car[];
 
 
 
   ngOnInit(): void {
-    this.getBrand();
+
+     this.getBrand();
+
   }
 
   getBrand() {
@@ -24,5 +30,7 @@ export class BrandCategoryComponent implements OnInit {
       this.brands = data;
     })
   }
+
+
 
 }
