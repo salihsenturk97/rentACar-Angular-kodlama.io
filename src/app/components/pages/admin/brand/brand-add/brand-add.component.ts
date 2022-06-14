@@ -1,5 +1,5 @@
-import { Brand } from './../../../models/brand';
-import { BrandService } from './../../../services/brand.service';
+import { Brand } from 'src/app/models/brand';
+import { BrandService } from 'src/app/services/brand.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 

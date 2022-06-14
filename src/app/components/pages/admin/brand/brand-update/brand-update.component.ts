@@ -1,6 +1,6 @@
-import { Brand } from './../../../models/brand';
-import { FormBuilder, Validators, NgForm,FormGroup } from '@angular/forms';
-import { BrandService } from './../../../services/brand.service';
+import { Brand } from 'src/app/models/brand';
+import { FormBuilder, Validators, NgForm, FormGroup } from '@angular/forms';
+import { BrandService } from 'src/app/services/brand.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -13,7 +13,7 @@ export class BrandUpdateComponent implements OnInit {
 
   constructor(private brandService: BrandService, private formBuilder: FormBuilder, private activatedRoute: ActivatedRoute) { }
 
-  brand:Brand=new Brand();
+  brand: Brand
   brandUpdateForm: FormGroup;
 
   selectedId: number;
@@ -61,7 +61,7 @@ export class BrandUpdateComponent implements OnInit {
         this.selectedId = params["id"]
     })
     this.brandService.getBrandById(this.selectedId).subscribe(data => {
-      this.brand= data
+      this.brand = data
       this.updateBrandForm();
 
     })

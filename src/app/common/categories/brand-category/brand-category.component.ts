@@ -11,7 +11,7 @@ export class BrandCategoryComponent implements OnInit {
 
   constructor(private brandService: BrandService) { }
 
-  brands:Brand[];
+  brands: Brand[];
 
 
 
@@ -20,8 +20,8 @@ export class BrandCategoryComponent implements OnInit {
   }
 
   getBrand() {
-    this.brandService.getBrand().subscribe(data=>{
-      this.brands=data;
+    this.brandService.getBrand().subscribe(data => {
+      this.brands = data;
     })
   }
 

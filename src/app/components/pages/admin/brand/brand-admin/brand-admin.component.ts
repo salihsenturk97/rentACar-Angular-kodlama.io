@@ -1,5 +1,5 @@
-import { Brand } from './../../../models/brand';
-import { BrandService } from './../../../services/brand.service';
+import { BrandService } from 'src/app/services/brand.service';
+import { Brand } from 'src/app/models/brand';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class BrandAdminComponent implements OnInit {
 
   constructor(private brandService: BrandService) { }
-brand:Brand;
+  brand: Brand;
   brands: Brand[];
-  val:number
+  selectedId: number
+  brandName:Brand
 
 
   ngOnInit(): void {
@@ -28,11 +29,15 @@ brand:Brand;
   }
 
 
-  deleteBrand(val:number){
-if(confirm("Silmek istediğinize emin misiniz?")){
-  this.brandService.deleteBrand(val).subscribe()
-  location.reload();
-}
+  deleteBrand(selectedId: number) {
+
+    if (confirm("Silmek istediğinize emin misiniz?")) {
+      this.brandService.deleteBrand(selectedId).subscribe(data=>{
+        this.brandName = data
+        alert("Başarıyla silindi.")
+      })
+      location.reload();
+    }
 
 
   }

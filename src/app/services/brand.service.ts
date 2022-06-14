@@ -16,8 +16,8 @@ export class BrandService {
   getBrand():Observable<Brand[]>{
     return this.httpClient.get<Brand[]>(this.apiUrl);
   }
-  addBrand(brand:Brand):Observable<Brand>{
-    return this.httpClient.post<Brand>(this.apiUrl,brand)
+  addBrand(val:Brand):Observable<Brand>{
+    return this.httpClient.post<Brand>(this.apiUrl,val)
   }
 
   deleteBrand(val:number):Observable<Brand>{
@@ -29,7 +29,7 @@ export class BrandService {
   }
 
   getBrandById(val:number):Observable<Brand>{
-    return this.httpClient.get<Brand>("http://localhost:3000/brands/"+val)
+    return this.httpClient.get<Brand>(this.apiUrl+val)
   }
 
 
