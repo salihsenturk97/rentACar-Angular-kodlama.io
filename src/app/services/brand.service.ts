@@ -32,5 +32,9 @@ export class BrandService {
     return this.httpClient.get<Brand>(this.apiUrl+val)
   }
 
+  getBrandByname(name:string):Observable<Brand>{
+    return this.httpClient.get()
+  }
+
 
 }

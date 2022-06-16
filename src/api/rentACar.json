@@ -112,6 +112,15 @@
       "description": "718 Cayman",
       "colorName": "Siyah",
       "brandName": "Porsche"
+    },
+    {
+      "brandId": "2",
+      "colorId": "3",
+      "dailyPrice": 500,
+      "description": "nane",
+      "colorName": "Mavi",
+      "brandName": "BMW",
+      "id": 6
     }
   ],
   "colors": [

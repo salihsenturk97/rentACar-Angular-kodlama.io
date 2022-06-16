@@ -23,4 +23,8 @@ export class ColorService {
     return this.httpClient.delete<Color>(this.apiUrl+val)
    }
 
+   getColorById(val:number):Observable<Color>{
+    return this.httpClient.get<Color>(this.apiUrl+val)
+  }
+
 }
