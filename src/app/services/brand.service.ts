@@ -33,7 +33,7 @@ export class BrandService {
   }
 
   getBrandByname(name:string):Observable<Brand>{
-    return this.httpClient.get()
+    return this.httpClient.get<Brand>("http://localhost:3000/brands?q="+name)
   }
 
 

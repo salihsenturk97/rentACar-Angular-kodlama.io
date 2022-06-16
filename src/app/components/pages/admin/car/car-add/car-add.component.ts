@@ -7,28 +7,26 @@ import { CarService } from 'src/app/services/car.service';
 import { ColorService } from 'src/app/services/color.service';
 import { Color } from 'src/app/models/color';
 
+
 @Component({
   selector: 'app-car-add',
   templateUrl: './car-add.component.html',
   styleUrls: ['./car-add.component.css']
 })
 export class CarAddComponent implements OnInit {
-  car: Car;
-  brand: Brand
-  color: Color
+  car: Car = new Car();
+  brand: Brand = new Brand()
+  color: Color = new Color()
   carAddForm: FormGroup;
   brands: Brand[];
   colors: Color[];
   colorName: Color
-  colorId: number;
   getColorById: Color
 
   constructor(private carService: CarService, private formBuilder: FormBuilder, private brandService: BrandService, private colorService: ColorService) { }
 
   createCarAddForm() {
     this.carAddForm = this.formBuilder.group({
-      brandId: [""],
-      colorId: [""],
       dailyPrice: ["", Validators.required],
       description: ["", Validators.required],
       colorName: ["", Validators.required],
@@ -52,17 +50,28 @@ export class CarAddComponent implements OnInit {
     })
   }
   addCar() {
-    let selectedBrand = this.brands.find(element => element.id == this.carAddForm.value.brandName);
-    let selectedColor = this.colors.find(element => element.id == this.carAddForm.value.colorName);
-    this.carAddForm.value.brandName = selectedBrand.name;
-    this.carAddForm.value.colorName = selectedColor.colorName;
-    this.car = Object.assign({}, this.carAddForm.value);
-
-
+    this.getBrandByName(this.carAddForm.get("brandName").value)
+    this.getColorByName(this.carAddForm.get("colorName").value)
+    this.car.brandName = Object.assign({}, this.carAddForm.get("brandName").value);
+    this.car.colorName = Object.assign({}, this.carAddForm.get("colorName").value);
+    this.car.dailyPrice = Object.assign({}, this.carAddForm.get("dailyPrice").value);
+    this.car.description = Object.assign({}, this.carAddForm.get("description").value);
 
   }
 
+  getBrandByName(name: string) {
+    this.brandService.getBrandByname(name).subscribe(data => {
+      if (data[0].id) {
+        this.car.brandId = data[0].id
 
-
-
+      }
+    })
+  }
+  getColorByName(name: string) {
+    this.colorService.getColorByname(name).subscribe(data => {
+      if (data[0].id) {
+        this.car.colorId = data[0].id
+      }
+    })
+  }
 }
