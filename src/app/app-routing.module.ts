@@ -22,8 +22,8 @@ const routes: Routes = [
   {path:"car-add",component:CarAddComponent},
   {path:"car-admin",component:CarAdminComponent},
   {path:"car-update/:id",component:CarUpdateComponent},
-  {path:"brands/:id",component:CarListComponent},
-  {path:"colors/:id",component:CarListComponent},
+  {path:"brands/:brandId",component:CarListComponent},
+  {path:"colors/:colorId",component:CarListComponent},
   {path:"car-add-prop/:id", component: CarAddPropComponent}
 
 ];

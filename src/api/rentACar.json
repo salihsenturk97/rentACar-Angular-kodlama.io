@@ -114,15 +114,6 @@
       "brandName": "Porsche"
     },
     {
-      "brandId": "2",
-      "colorId": "3",
-      "dailyPrice": 500,
-      "description": "nane",
-      "colorName": "Mavi",
-      "brandName": "BMW",
-      "id": 6
-    },
-    {
       "brandId": 2,
       "colorId": 4,
       "brandName": "BMW",
@@ -130,6 +121,24 @@
       "dailyPrice": 4000,
       "description": "X7",
       "id": 11
+    },
+    {
+      "brandId": 2,
+      "colorId": 8,
+      "brandName": "BMW",
+      "colorName": "Gözlerinin rengi",
+      "dailyPrice": 500,
+      "description": "nane",
+      "id": 12
+    },
+    {
+      "brandId": 6,
+      "colorId": 13,
+      "brandName": "Volvo",
+      "colorName": "Lacivert",
+      "dailyPrice": 500,
+      "description": "nane",
+      "id": 13
     }
   ],
   "colors": [
@@ -219,6 +228,5 @@
       "id": 7,
       "name": "Yol Yardım Assistans"
     }
-    
   ]
 }

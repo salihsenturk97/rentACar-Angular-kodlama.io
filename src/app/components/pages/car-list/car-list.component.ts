@@ -21,8 +21,11 @@ export class CarListComponent implements OnInit {
 
     this.carService.getCar().subscribe(data=>{
       this.activatedRoute.params.subscribe(param=>{
-        if(param["id"]){
-          this.cars=data.filter(data=>data.brandId==param["id"]);
+        if(param["brandId"]){
+          this.cars=data.filter(data=>data.brandId==param["brandId"]);
+        }
+        else if(param["colorId"]){
+          this.cars=data.filter(data=>data.colorId==param["colorId"]);
         }
         else{
 

@@ -20,8 +20,7 @@ export class CarAddPropComponent implements OnInit {
   carProps: CarProperty[]
   carPropForm: FormGroup
   isCheck:boolean = false
-  cart: CartItem
-
+  cart: CartItem[]
 
   ngOnInit(): void {
     this.getCarDetail()
@@ -47,6 +46,7 @@ export class CarAddPropComponent implements OnInit {
       this.activatedRoute.params.subscribe(param=>{
         if(param["id"]){
           this.car=data.find(data=>data.id==param["id"]);
+
         }
       })
     })
