@@ -1,3 +1,4 @@
+import { CarAddPropComponent } from './components/pages/car-add-prop/car-add-prop.component';
 import { CarUpdateComponent } from './components/pages/admin/car/car-update/car-update.component';
 import { CarAddComponent } from './components/pages/admin/car/car-add/car-add.component';
 import { CarAdminComponent } from './components/pages/admin/car/car-admin/car-admin.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:"car-admin",component:CarAdminComponent},
   {path:"car-update/:id",component:CarUpdateComponent},
   {path:"brands/:id",component:CarListComponent},
-  {path:"colors/:id",component:CarListComponent}
+  {path:"colors/:id",component:CarListComponent},
+  {path:"car-add-prop/:id", component: CarAddPropComponent}
 
 ];
 

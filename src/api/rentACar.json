@@ -121,6 +121,15 @@
       "colorName": "Mavi",
       "brandName": "BMW",
       "id": 6
+    },
+    {
+      "brandId": 2,
+      "colorId": 4,
+      "brandName": "BMW",
+      "colorName": "Beyaz",
+      "dailyPrice": 4000,
+      "description": "X7",
+      "id": 11
     }
   ],
   "colors": [
@@ -180,5 +189,36 @@
       "colorName": "Gri",
       "id": 14
     }
+  ],
+  "carProperties": [
+    {
+      "id": 1,
+      "name": "Adrese Teslim"
+    },
+    {
+      "id": 2,
+      "name": "Adresten İade"
+    },
+    {
+      "id": 3,
+      "name": "Ek Sürücü"
+    },
+    {
+      "id": 4,
+      "name": "GPS"
+    },
+    {
+      "id": 5,
+      "name": "Çocuk Koltuğu"
+    },
+    {
+      "id": 6,
+      "name": "Güvence Paketi"
+    },
+    {
+      "id": 7,
+      "name": "Yol Yardım Assistans"
+    }
+    
   ]
 }
