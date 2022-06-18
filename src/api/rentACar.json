@@ -121,24 +121,6 @@
       "dailyPrice": 4000,
       "description": "X7",
       "id": 11
-    },
-    {
-      "brandId": 2,
-      "colorId": 8,
-      "brandName": "BMW",
-      "colorName": "Gözlerinin rengi",
-      "dailyPrice": 500,
-      "description": "nane",
-      "id": 12
-    },
-    {
-      "brandId": 6,
-      "colorId": 13,
-      "brandName": "Volvo",
-      "colorName": "Lacivert",
-      "dailyPrice": 500,
-      "description": "nane",
-      "id": 13
     }
   ],
   "colors": [
@@ -202,31 +184,55 @@
   "carProperties": [
     {
       "id": 1,
-      "name": "Adrese Teslim"
+      "name": "Adrese Teslim",
+      "unitPrice": 10,
+      "isChecked": false
     },
     {
       "id": 2,
-      "name": "Adresten İade"
+      "name": "Adresten İade",
+      "unitPrice": 10,
+      "isChecked": false
     },
     {
       "id": 3,
-      "name": "Ek Sürücü"
+      "name": "Ek Sürücü",
+      "unitPrice": 10,
+      "isChecked": false
     },
     {
       "id": 4,
-      "name": "GPS"
+      "name": "GPS",
+      "unitPrice": 10,
+      "isChecked": false
     },
     {
       "id": 5,
-      "name": "Çocuk Koltuğu"
+      "name": "Çocuk Koltuğu",
+      "unitPrice": 10,
+      "isChecked": false
     },
     {
       "id": 6,
-      "name": "Güvence Paketi"
+      "name": "Güvence Paketi",
+      "unitPrice": 10,
+      "isChecked": false
     },
     {
       "id": 7,
-      "name": "Yol Yardım Assistans"
+      "name": "Yol Yardım Assistans",
+      "unitPrice": 10,
+      "isChecked": false
     }
+  ],
+  "users": [
+    {
+      "eMail": "salihsenturk97@gmail.com",
+      "password":"123456"
+
+    }
+
+
   ]
+
 }

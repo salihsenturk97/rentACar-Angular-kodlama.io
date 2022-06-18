@@ -1,3 +1,5 @@
+import { LoginComponent } from './components/pages/login/login.component';
+import { LoginGuard } from './guards/login.guard';
 import { CarAddPropComponent } from './components/pages/car-add-prop/car-add-prop.component';
 import { CarUpdateComponent } from './components/pages/admin/car/car-update/car-update.component';
 import { CarAddComponent } from './components/pages/admin/car/car-add/car-add.component';
@@ -14,7 +16,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path:"",component:CarListComponent},
   {path:"brand-admin",component:BrandAdminComponent},
-  {path:"brand-add",component:BrandAddComponent},
+  {path:"brand-add",component:BrandAddComponent,canActivate:[LoginGuard]},
   {path:"brand-update/:id",component:BrandUpdateComponent},
   {path:"color-admin",component:ColorAdminComponent},
   {path:"color-add",component:ColorAddComponent},
@@ -24,7 +26,8 @@ const routes: Routes = [
   {path:"car-update/:id",component:CarUpdateComponent},
   {path:"brands/:brandId",component:CarListComponent},
   {path:"colors/:colorId",component:CarListComponent},
-  {path:"car-add-prop/:id", component: CarAddPropComponent}
+  {path:"car-add-prop/:id", component: CarAddPropComponent},
+  {path:"login", component: LoginComponent}
 
 ];
 
