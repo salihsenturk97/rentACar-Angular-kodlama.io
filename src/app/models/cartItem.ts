@@ -1,6 +1,4 @@
-import { CarProperty } from './carProperty';
-import { Car } from './car';
-export class CartItem{
-    car: Car
-    properties: CarProperty[]
+import { Car } from 'src/app/models/car';
+export class CartItem {
+  car: Car
 }

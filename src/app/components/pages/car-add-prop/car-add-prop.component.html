@@ -8,11 +8,13 @@
         <p class="card-text">Renk: {{ car.colorName }}</p>
         <p class="card-text">Günlük fiyat: {{ car.dailyPrice }}</p>
       </div>
+
     </div>
     <div class="col-md-8">
-      <ul class="list-group" *ngFor="">
-        <li class="list-group-item">An item</li>
+      <ul class="list-group" *ngFor="let carProp of carProps">
+        <li class="list-group-item">{{carProp.name}} <button style="float:right ;" type="button" class="btn btn-primary" (click)="addProp(carProp)">Ekle</button></li>
       </ul>
     </div>
+
   </div>
 </div>
