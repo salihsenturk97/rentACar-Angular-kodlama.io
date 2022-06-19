@@ -9,23 +9,10 @@
         <p class="card-text">Günlük fiyat: {{ car.dailyPrice }}</p>
       </div>
     </div>
-    <div class="col-md-6">
-      <form *ngIf="carPropForm" [formGroup]="carPropForm" (ngSubmit)="addCarProp()">
-        <div *ngFor="let carProp of carProps">
-
-          <input type="checkbox" [checked]="carProp.isChecked" (change)="onChange(carProp.isChecked)">
-
-          {{ carProp.name }}
-
-
-          <!-- <label type="checkbox" (checked)="carProp.isChecked" (checkedChange)="onChange($event)">
-            {{ carProp.name }}
-
-          </label> -->
-          <!-- <input type="checkbox" (checked)="carProp.isChecked" [value]="carProp.id" (checkedChange)="onChange($event)" /> -->
-        </div>
-        <button type="submit">submit</button>
-      </form>
+    <div class="col-md-8">
+      <ul class="list-group" *ngFor="">
+        <li class="list-group-item">An item</li>
+      </ul>
     </div>
   </div>
 </div>

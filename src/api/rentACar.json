@@ -121,6 +121,24 @@
       "dailyPrice": 4000,
       "description": "X7",
       "id": 11
+    },
+    {
+      "brandId": 2,
+      "colorId": 3,
+      "brandName": "BMW",
+      "colorName": "Kahverengi",
+      "dailyPrice": 800,
+      "description": "deneme2",
+      "id": 12
+    },
+    {
+      "brandId": 2,
+      "colorId": 1,
+      "brandName": "BMW",
+      "colorName": "Kırmızı",
+      "dailyPrice": 505,
+      "description": "deneme58",
+      "id": 13
     }
   ],
   "colors": [
@@ -228,11 +246,7 @@
   "users": [
     {
       "eMail": "salihsenturk97@gmail.com",
-      "password":"123456"
-
+      "password": "123456"
     }
-
-
   ]
-
 }

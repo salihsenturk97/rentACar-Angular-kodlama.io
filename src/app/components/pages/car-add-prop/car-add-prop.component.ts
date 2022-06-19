@@ -43,6 +43,7 @@ export class CarAddPropComponent implements OnInit {
       this.carProps = Object.assign({}, this.carPropForm.value)
     }
   }
+
   getCarDetail() {
 
     this.carService.getCar().subscribe(data => {
@@ -56,27 +57,10 @@ export class CarAddPropComponent implements OnInit {
 
 
 
-
-
   getCarProps() {
     this.cartService.getCarProps().subscribe(data => {
       this.carProps = data
     })
-  }
-
-  onChange(isChecked) {
-    // const id = $event.target.value
-    // const isChecked = $event.target.checked
-    // this.carProp.isChecked = isChecked
-    // this.carProp.id = $event.target.value
-    // this.carProp.name = $event.target.name
-
-    //console.log($event)
-    console.log(isChecked)
-    if (isChecked) {
-
-    }
-
   }
 
 }

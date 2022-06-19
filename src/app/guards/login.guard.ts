@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,9 +10,15 @@ export class LoginGuard implements CanActivate {
 
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-  console.log("Guard'dan geçti");
+    if (localStorage.getItem("loginToken")) {
 
-    return true;
+      return true;
+
+    }
+
+    else
+      return false
+
 
   }
 
