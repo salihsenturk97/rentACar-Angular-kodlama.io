@@ -139,6 +139,24 @@
       "dailyPrice": 505,
       "description": "deneme58",
       "id": 13
+    },
+    {
+      "brandId": 2,
+      "colorId": 3,
+      "brandName": "BMW",
+      "colorName": "Kahverengi",
+      "dailyPrice": 123456,
+      "description": "tokendeneme",
+      "id": 14
+    },
+    {
+      "brandId": 2,
+      "colorId": 1,
+      "brandName": "BMW",
+      "colorName": "Kırmızı",
+      "dailyPrice": 55151,
+      "description": "dedede",
+      "id": 15
     }
   ],
   "colors": [
@@ -245,8 +263,21 @@
   ],
   "users": [
     {
+      "id": 1,
       "eMail": "salihsenturk97@gmail.com",
       "password": "123456"
+    },
+    {
+      "eMail": "salih",
+      "password": "salih",
+      "id": 2
+    }
+  ],
+  "addresses": [
+    {
+      "id": 1,
+      "userId": 1,
+      "billing": "salihsenturk97@gmail.com"
     }
   ]
 }

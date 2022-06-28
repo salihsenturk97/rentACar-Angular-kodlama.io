@@ -10,12 +10,13 @@ import { LoginModel } from '../models/loginModel';
 })
 export class AuthService {
 
-  apiUrl = "http://localhost:3000/users/;";
+  apiUrl = "http://localhost:3000/users/";
   constructor(private httpClient:HttpClient) { }
 
 
     checkUser(loginModel:LoginModel):Observable<LoginModel>{
       return this.httpClient.get<LoginModel>('http://localhost:3000/users/?eMail='+loginModel.eMail+'&password='+loginModel.password)
+
 
   // isAuthenticated(){
   //   if(localStorage.getItem("token")){
@@ -27,4 +28,9 @@ export class AuthService {
   // }
 
 }
+
+addUser(val:LoginModel):Observable<LoginModel>{
+  return this.httpClient.post<LoginModel>(this.apiUrl,val)
+}
+
 }

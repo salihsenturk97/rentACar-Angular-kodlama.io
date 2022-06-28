@@ -28,6 +28,8 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul>
+      <a class="nav-link active"  aria-current="page"  routerLink="/contact" >Contact</a>
+      <a class="nav-link active" *ngIf="isLogged==false" aria-current="page"  routerLink="/register" >Üye ol</a>
       <a class="nav-link active" *ngIf="isLogged==true" aria-current="page" (click)="logOut()"  >Çıkış yap</a>
       <a class="nav-link active" *ngIf="isLogged==false" aria-current="page"  routerLink="/login" >Giriş yap</a>
       <li class="nav-item dropdown">

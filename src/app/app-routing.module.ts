@@ -1,3 +1,5 @@
+import { RegisterComponent } from './components/pages/register/register.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
 import { PageBackGuard } from './guards/page-back.guard';
 import { LoginComponent } from './components/pages/login/login.component';
 import { LoginGuard } from './guards/login.guard';
@@ -28,8 +30,10 @@ const routes: Routes = [
   { path: "car-update/:id", component: CarUpdateComponent, canActivate: [LoginGuard], canDeactivate: [PageBackGuard] },
   { path: "brands/:brandId", component: CarListComponent },
   { path: "colors/:colorId", component: CarListComponent},
-  { path: "car-add-prop/:id", component: CarAddPropComponent, canActivate: [LoginGuard], canDeactivate: [PageBackGuard] },
-  { path: "login", component: LoginComponent }
+  { path: "car-add-prop/:id", component: CarAddPropComponent },
+  { path: "login", component: LoginComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "register", component: RegisterComponent }
 
 ];
 

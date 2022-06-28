@@ -1,7 +1,7 @@
 import { BrandAdminComponent } from './components/pages/admin/brand/brand-admin/brand-admin.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from "@angular/common/http"
+import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +20,10 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { BrandPipe } from './pipes/brand.pipe';
 import { CarAddPropComponent } from './components/pages/car-add-prop/car-add-prop.component';
 import { LoginComponent } from './components/pages/login/login.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { ContactComponent } from './components/pages/contact/contact.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 
 
 @NgModule({
@@ -40,7 +44,9 @@ import { LoginComponent } from './components/pages/login/login.component';
     FilterPipe,
     BrandPipe,
     CarAddPropComponent,
-    LoginComponent
+    LoginComponent,
+    ContactComponent,
+    RegisterComponent
 
 
   ],
@@ -48,9 +54,10 @@ import { LoginComponent } from './components/pages/login/login.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GoogleMapsModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { CartItems } from './../../../models/cartItems';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { CarProperty } from './../../../models/carProperty';
 import { Car } from './../../../models/car';
 import { Component, OnInit } from '@angular/core';
@@ -13,16 +13,16 @@ import { CarProp } from 'src/app/models/carProp';
   selector: 'app-car-add-prop',
   templateUrl: './car-add-prop.component.html',
   styleUrls: ['./car-add-prop.component.css'],
-  providers: [CarService, CartService, FormBuilder]
+  providers: [CarService, CartService, UntypedFormBuilder]
 })
 export class CarAddPropComponent implements OnInit {
 
-  constructor(private carService: CarService, private activatedRoute: ActivatedRoute, private cartService: CartService, private formBuilder: FormBuilder) { }
+  constructor(private carService: CarService, private activatedRoute: ActivatedRoute, private cartService: CartService, private formBuilder: UntypedFormBuilder) { }
   car: Car
   carProps: CarProperty[]
   selectedCarProps: CarProperty[] = []
   carProp: CarProperty
-  carPropForm: FormGroup
+  carPropForm: UntypedFormGroup
   isCheck: boolean = false
   carId:Car;
   cartItems: CartItem[] = []

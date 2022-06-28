@@ -106,5 +106,7 @@
       }
     }
   },
-  "defaultProject": "rentACar-frontend"
+  "cli": {
+    "analytics": false
+  }
 }

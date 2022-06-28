@@ -1,6 +1,6 @@
 import { LoginModel } from './../../../models/loginModel';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -10,8 +10,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent implements OnInit {
   users: LoginModel
-  loginForm: FormGroup;
-  constructor(private formBuilder: FormBuilder,
+  loginForm: UntypedFormGroup;
+  constructor(private formBuilder: UntypedFormBuilder,
     private authService: AuthService) { }
 
   ngOnInit(): void {
