@@ -1,4 +1,60 @@
-<body class="text-center">
+<body>
+  <div id="login">
+
+    <div class="container">
+
+      <div id="login-row" class="row justify-content-center align-items-center">
+        <div id="login-column" class="col-md-6">
+          <div id="login-box" class="col-md-12">
+            <form [formGroup]="loginForm">
+              <h3 class="text-center text-dark" >{{'Login' | translate}}</h3>
+
+
+              <div class="form-group">
+                <input style="margin-top:15px ;" type="text" id="eMail" formControlName="eMail" class="form-control"
+                  placeholder="{{'enterEmail' | translate}}">
+              </div>
+
+
+
+
+              <div class="form-group">
+                <input style="margin-top:15px ;" type="password" id="password" formControlName="password"
+                  class="form-control" placeholder="{{'Password' | translate}}">
+              </div>
+              <div>
+                <button style="margin-top:15px ;" class="w-100 btn btn-lg btn-primary" (click)="checkUser()">{{'Login' | translate}}</button>
+              </div>
+
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <body class="text-center">
 
   <form [formGroup]="loginForm">
     <h1 class="h3 mb-3 fw-normal">Giriş yap</h1>
@@ -18,4 +74,4 @@
 
   </form>
 
-</body>
+</body> -->

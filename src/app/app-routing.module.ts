@@ -33,7 +33,7 @@ const routes: Routes = [
   { path: "car-add-prop/:id", component: CarAddPropComponent },
   { path: "login", component: LoginComponent },
   { path: "contact", component: ContactComponent },
-  { path: "register", component: RegisterComponent }
+  { path: "register", component: RegisterComponent ,canDeactivate: [PageBackGuard]}
 
 ];
 

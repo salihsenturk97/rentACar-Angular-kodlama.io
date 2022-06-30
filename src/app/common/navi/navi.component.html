@@ -24,15 +24,14 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
+
+
       </ul>
-      <a class="nav-link active"  aria-current="page"  routerLink="/contact" >Contact</a>
-      <a class="nav-link active" *ngIf="isLogged==false" aria-current="page"  routerLink="/register" >Üye ol</a>
-      <a class="nav-link active" *ngIf="isLogged==true" aria-current="page" (click)="logOut()"  >Çıkış yap</a>
-      <a class="nav-link active" *ngIf="isLogged==false" aria-current="page"  routerLink="/login" >Giriş yap</a>
-      <li class="nav-item dropdown">
+      Dil:
+      <select #selLang (change)="translateLanguageTo(selLang.value)" >
+        <option *ngFor="let language of translate.getLangs()" [value]="language" >{{ language }}</option>
+      </select>
+      <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" *ngIf="isLogged==true" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Cart
         </a>
@@ -42,10 +41,13 @@
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+      </div>
+      <a class="nav-link active"  aria-current="page"  routerLink="/contact" >Contact</a>
+      <a class="nav-link active" *ngIf="isLogged==false" aria-current="page"  routerLink="/register" >Üye ol</a>
+      <a class="nav-link active" *ngIf="isLogged==true"  aria-current="page" (click)="logOut()"  >Çıkış yap</a>
+      <a class="nav-link active" *ngIf="isLogged==false" aria-current="page"  routerLink="/login" >Giriş yap</a>
+
+
     </div>
   </div>
 </nav>
